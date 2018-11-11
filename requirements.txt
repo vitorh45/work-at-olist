@@ -1,0 +1,7 @@
+coverage==4.5.1
+Django==2.1.2
+djangorestframework==3.8.2
+freezegun==0.3.11
+gunicorn==19.9.0
+requests==2.20.0
+django-heroku==0.3.1

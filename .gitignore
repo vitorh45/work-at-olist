@@ -7,3 +7,7 @@
 *.log
 .env
 tmp
+.coverage
+.dbslite3
+.venv
+htmlcov
