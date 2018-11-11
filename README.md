@@ -217,6 +217,7 @@ The following phone calls have been made from the number 99 98852 6423 to 99 334
 
 ## How to run the project locally
 * Install a virtualenv, activate it and install the requirements: "pip install -r requirements.txt"
+* To add the initial data: "python manage.py loaddata data.json --settings=telecom.settings_local"
 * To run the project, go to the project dir and execute: "python manage.py runserver --settings=telecom.settings_local"
 * To run the tests: "python manage.py test --settings=telecom.settings_local". Or if you want to use the coverage: "coverage run --source='phonecall' manage.py test --settings=telecom.settings_local"
 
