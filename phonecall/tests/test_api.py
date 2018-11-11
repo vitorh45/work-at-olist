@@ -69,7 +69,8 @@ class TestPhoneCallBill(TestCase):
 
     @freeze_time("2018-12-05")
     def test_phonecall_bill_with_date(self):
-        response = self.client.get(reverse('phonecalls-bill-list'), {'source': 19982065330, 'month': 10, 'year': 2018})
+        response = self.client.get(reverse('phonecalls-bill-list'),
+                                   {'source': 19982065330, 'month': 10, 'year': 2018})
         assert response.data['total_price'] == 'R$ 0,81'
         assert response.data['calls'][0]['destination'] == 19982055500
         assert response.data['calls'][0]['call_duration'] == '0h5m0s'
@@ -80,11 +81,12 @@ class TestPhoneCallBill(TestCase):
         assert not response.data['calls']
 
     def test_phonecall_bill_with_invalid_source(self):
-        response = self.client.get(reverse('phonecalls-bill-list'), {'source': 1998206533, 'month': 9, 'year': 2018})
+        response = self.client.get(reverse('phonecalls-bill-list'), {'source': '1998206533', 'month': 9, 'year': 2018})
         assert response.status_code == 400
         assert response.json()[0] == 'Invalid Source value.'
 
     def test_phonecall_bill_with_invalid_date(self):
-        response = self.client.get(reverse('phonecalls-bill-list'), {'source': 19982065330, 'month': 14, 'year': 2018})
+        response = self.client.get(reverse('phonecalls-bill-list'),
+                                   {'source': 19982065330, 'month': 14, 'year': 2018})
         assert response.status_code == 400
         assert response.json()[0] == 'Invalid month/year value.'

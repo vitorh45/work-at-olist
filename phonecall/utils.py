@@ -4,8 +4,6 @@ from decimal import Decimal, ROUND_UP
 
 from rest_framework import exceptions
 
-from .models import PhoneCall
-
 
 def format_duration(value):
     hours, rem = divmod(value.seconds, 3600)
@@ -19,6 +17,7 @@ def format_price(value):
 
 
 def get_phone_data(phone_call_end):
+    from .models import PhoneCall
     phone_call_start = PhoneCall.objects.get(type='start', call_id=phone_call_end.call_id)
     call_start_time = time(phone_call_start.timestamp.hour, phone_call_start.timestamp.minute,
                            phone_call_start.timestamp.second)

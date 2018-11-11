@@ -15,10 +15,10 @@ class PhoneCall(models.Model):
     type = models.CharField('Type', choices=TYPE_CHOICES, max_length=5)
     timestamp = models.DateTimeField('Timestamp')
     call_id = models.CharField('Call ID', max_length=32)
-    source = models.IntegerField('Source number', null=True, blank=True, validators=[MinValueValidator(00000000000),
-                                                                                     MaxValueValidator(99999999999)])
-    destination = models.IntegerField('Destination number', null=True, blank=True,
-                                      validators=[MinValueValidator(00000000000), MaxValueValidator(99999999999)])
+    source = models.BigIntegerField('Source number', null=True, blank=True, validators=[MinValueValidator(0000000000),
+                                                                                        MaxValueValidator(99999999999)])
+    destination = models.BigIntegerField('Destination number', null=True, blank=True,
+                                         validators=[MinValueValidator(0000000000), MaxValueValidator(99999999999)])
     duration = models.DurationField('Duration time', blank=True, null=True)
     price = models.DecimalField('Price', max_digits=7, decimal_places=2, blank=True, null=True)
 
