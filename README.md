@@ -213,3 +213,21 @@ The following phone calls have been made from the number 99 98852 6423 to 99 334
 * Be careful with REST API details. They can bite you!
 
 **Have fun!**
+
+
+## How to run the project locally
+* Install a virtualenv, activate it and install the requirements: "pip install -r requirements.txt"
+* To run the project, go to the project dir and execute: "python manage.py runserver --settings=telecom.settings_local"
+* To run the tests: "python manage.py test --settings=telecom.settings_local". Or if you want to use the coverage: "coverage run --source='phonecall' manage.py test --settings=telecom.settings_local"
+
+
+#### Local env
+* Computer used: MacBook Pro with the Mojave 10.14;
+* IDE used: PyCharm Community and Sublime Text 3;
+* Libs: coverage, requests, django rest framework, django;
+* Software to make the api calls: Advanced Rest Client;
+
+#### API Docs
+* There two endpoints to call on this API: to create and phone call and get the phone calls bill;
+* To add a phone call, do a POST to the endpoint "/api/phonecalls/" passing the dict with the phone call data;
+* To get the bill, do a GET to the endpoint "/api/phonecalls-bill/" and pass the query params "source" (not optional) and "month" and "year" (both optional);
