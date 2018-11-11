@@ -1,1 +1,1 @@
-web: gunicorn --chdir work-at-olist telecom.wsgi --log-file -
+web: gunicorn telecom.wsgi --log-file -
