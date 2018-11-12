@@ -229,6 +229,8 @@ The following phone calls have been made from the number 99 98852 6423 to 99 334
 * Software to make the api calls: Advanced Rest Client;
 
 #### API Docs
+* The live version of this project is running on this URL: "https://vitor-olist.herokuapp.com";
 * There two endpoints to call on this API: to create and phone call and get the phone calls bill;
 * To add a phone call, do a POST to the endpoint "/api/phonecalls/" passing the dict with the phone call data;
 * To get the bill, do a GET to the endpoint "/api/phonecalls-bill/" and pass the query params "source" (not optional) and "month" and "year" (both optional);
+* Remember to use your localhost url if you want to test the local project. Besides that, use the live url.
