@@ -225,8 +225,11 @@ The following phone calls have been made from the number 99 98852 6423 to 99 334
 #### Local env
 * Computer used: MacBook Pro with the Mojave 10.14;
 * IDE used: PyCharm Community and Sublime Text 3;
-* Libs: coverage, requests, django rest framework, django;
-* Software to make the api calls: Advanced Rest Client;
+* All the libs used are in the requirements.txt;
+* Softwares used:
+  - to make the api calls: Advanced Rest Client;
+  - Iterm2 to execute the django and git commands;
+  - Chrome to eventually access the project's admin.
 
 #### API Docs
 * The live version of this project is running on this URL: "https://vitor-olist.herokuapp.com";
