@@ -225,7 +225,8 @@ The following phone calls have been made from the number 99 98852 6423 to 99 334
 #### Local env
 * Computer used: MacBook Pro with the Mojave 10.14;
 * IDE used: PyCharm Community and Sublime Text 3;
-* All the libs used are in the requirements.txt;
+* The project was made using mainly Python 3.5+, Django 2.1 and Django Rest Framework 3.8.2;
+* All the remaining libs used are in the requirements.txt;
 * Softwares used:
   - to make the api calls: Advanced Rest Client;
   - Iterm2 to execute the django and git commands;
